@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コンパイラーの設定について</title>
+</head>
+
+<body>
+  <h1>概要</h1>
+  <p>すべてのファイルをコンパイルする場合、tscコマンドを使う</p>
+  <p>ctrl + shift + b　でビルドまたはウォッチモード</p>
+  <h1>tsconfigについて</h1>
+  <p>excludeを指定した場合は、デフォルトの「node_modules」が上書きされてしまうので、同時に「node_modules」を指定する必要がある。</p>
+  <code>
+    <pre>
+		"exclude": [
+			"index.ts",
+			"node_modules"
+		]
+	</pre>
+  </code>
+  <p>libのデフォルトはtargetによって自動的に変更される（基本は変更しないでOK）</p>
+  <script src="main.js"></script>
+</body>
+
+</html>
